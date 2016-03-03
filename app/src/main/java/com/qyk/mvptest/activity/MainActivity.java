@@ -1,4 +1,4 @@
-package com.qyk.mvptest;
+package com.qyk.mvptest.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.qyk.mvptest.bean.User;
+import com.gaosi.model.TeacherInfo;
+import com.qyk.mvptest.R;
 import com.qyk.mvptest.presenter.UserLoginPresenter;
 import com.qyk.mvptest.view.IUserLoginView;
 
@@ -39,7 +40,11 @@ public class MainActivity extends AppCompatActivity implements IUserLoginView{
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mUserLoginPresenter.login();
+                try{
+                    mUserLoginPresenter.login();
+                }catch(Exception e){
+                    hideLoading();
+                }
             }
         });
 
@@ -81,14 +86,14 @@ public class MainActivity extends AppCompatActivity implements IUserLoginView{
     }
 
     @Override
-    public void toMainActivity(User user) {
-        Toast.makeText(this, user.getUsername() +
-                " login success , to MainActivity", Toast.LENGTH_SHORT).show();
+    public void toMainActivity(TeacherInfo user) {
+        Toast.makeText(this, user.getTeacherName() +
+                "登录成功", Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void showFailedError() {
+    public void showFailedError(String message) {
         Toast.makeText(this,
-                "login failed", Toast.LENGTH_SHORT).show();
+                message, Toast.LENGTH_SHORT).show();
     }
 }

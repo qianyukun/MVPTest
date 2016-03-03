@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MVPTest</string>
+    <string name="http_error">请检查网络</string>
 </resources>

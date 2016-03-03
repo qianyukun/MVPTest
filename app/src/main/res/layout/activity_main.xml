@@ -24,7 +24,8 @@
         <EditText
             android:id="@+id/id_et_username"
             android:ems="10"
-            app:layout_columnSpan="2"/>
+            app:layout_columnSpan="2"
+            android:text="18233206780"/>
 
         <TextView
             android:text="Password:"
@@ -34,7 +35,8 @@
         <EditText
             android:id="@+id/id_et_password"
             android:ems="10"
-            app:layout_columnSpan="2"/>
+            app:layout_columnSpan="2"
+            android:text="123456"/>
 
         <Button
             android:id="@+id/id_btn_login"
