@@ -3,11 +3,11 @@ package com.qyk.mvptest.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.gaosi.model.TeacherInfo;
 import com.qyk.mvptest.R;
 import com.qyk.mvptest.presenter.UserLoginPresenter;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements IUserLoginView{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
@@ -40,11 +41,7 @@ public class MainActivity extends AppCompatActivity implements IUserLoginView{
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    mUserLoginPresenter.login();
-                }catch(Exception e){
-                    hideLoading();
-                }
+                mUserLoginPresenter.login();
             }
         });
 
