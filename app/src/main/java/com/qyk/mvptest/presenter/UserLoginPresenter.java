@@ -26,7 +26,6 @@ import retrofit.Retrofit;
 public class UserLoginPresenter {
     //事务
     private ITeacherService teacherService;
-    //
     private IUserLoginView userLoginView;
     private Handler mHandler = new Handler();
 
@@ -101,6 +100,10 @@ public class UserLoginPresenter {
                 });
             }
         });
+    }
+
+    public void forgetPassWord(){
+        userLoginView.toForgetPasswordActivity();
     }
 
     public void clear() {

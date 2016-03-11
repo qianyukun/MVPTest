@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MVPTest</string>
     <string name="http_error">请检查网络</string>
+    <string name="phonenumber">18233206780</string>
+    <string name="password">123456</string>
+    <string name="queding">确定</string>
 </resources>

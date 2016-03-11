@@ -1,5 +1,7 @@
 package com.qyk.mvptest.view;
 
+import android.content.Context;
+
 import com.gaosi.model.TeacherInfo;
 
 /**
@@ -24,6 +26,8 @@ public interface IUserLoginView
     void hideLoading();
     //登录成功，跳转主界面
     void toMainActivity(TeacherInfo user);
+    //跳转忘记密码页
+    void toForgetPasswordActivity();
     //显示错误信息
     void showFailedError(String message);
 }
