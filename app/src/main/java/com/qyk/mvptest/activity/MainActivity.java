@@ -1,6 +1,5 @@
 package com.qyk.mvptest.activity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -12,7 +11,6 @@ import android.widget.Toast;
 import com.andexert.library.RippleView;
 import com.gaosi.model.TeacherInfo;
 import com.qyk.mvptest.R;
-import com.qyk.mvptest.base.BaseActivity;
 import com.qyk.mvptest.presenter.UserLoginPresenter;
 import com.qyk.mvptest.view.IUserLoginView;
 
